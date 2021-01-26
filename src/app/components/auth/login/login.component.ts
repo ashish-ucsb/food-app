@@ -8,6 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  authStatus: string = '';
   email: string = '';
   password: string = '';
 
@@ -17,8 +18,6 @@ export class LoginComponent implements OnInit {
 
   loginSubmit() {
     this.authService.login(this.email, this.password);
-    if (localStorage.getItem('authStatus') == 'logged-in') {
-      this.router.navigate(['/']);
-    }
+    this.router.navigate(['/']);
   }
 }

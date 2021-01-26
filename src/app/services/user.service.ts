@@ -10,6 +10,10 @@ export class UserService {
 
   constructor(private HttpClient: HttpClient) {}
 
+  addUser(user: any) {
+    return this.HttpClient.post(this.restAPI, user);
+  }
+
   getUsers() {
     return this.HttpClient.get<any[]>(this.restAPI);
   }

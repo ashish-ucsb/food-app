@@ -10,6 +10,8 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { ForgotPasswordComponent } from './components/auth/forgot-password/forgot-password.component';
 import { PageNotFoundComponent } from './components/layout/page-not-found/page-not-found.component';
+import { FeedComponent } from './components/feed/feed.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { PageNotFoundComponent } from './components/layout/page-not-found/page-n
     NavbarComponent,
     ForgotPasswordComponent,
     PageNotFoundComponent,
+    FeedComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,

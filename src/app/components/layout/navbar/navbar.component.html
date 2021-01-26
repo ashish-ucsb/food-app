@@ -17,11 +17,16 @@
     </ul>
     <div class="mt-2 mt-md-0">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active">
+        <li *ngIf="authStatus == ''" class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="/auth/register">Register</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li *ngIf="authStatus == ''" class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="/auth/login">Login</a>
+        </li>
+        <li *ngIf="authStatus != ''" class="nav-item">
+          <form (ngSubmit)="logout()">
+            <button type="submit" class="btn btn-secondary">Logout</button>
+          </form>
         </li>
       </ul>
     </div>
