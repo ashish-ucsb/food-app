@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  authStatus: string = '';
+  authStatus: any = JSON.parse(localStorage.getItem('authStatus') || '{}');
   email: string = '';
   password: string = '';
 

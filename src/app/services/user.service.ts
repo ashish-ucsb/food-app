@@ -14,6 +14,10 @@ export class UserService {
     return this.HttpClient.post(this.restAPI, user);
   }
 
+  updateUser(user: any) {
+    return this.HttpClient.put(this.restAPI + '/' + user.id, user);
+  }
+
   getUsers() {
     return this.HttpClient.get<any[]>(this.restAPI);
   }

@@ -12,6 +12,12 @@ import { ForgotPasswordComponent } from './components/auth/forgot-password/forgo
 import { PageNotFoundComponent } from './components/layout/page-not-found/page-not-found.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { SettingsComponent } from './components/settings/settings.component';
+import { FriendsComponent } from './components/friends/friends.component';
+import { OrderListComponent } from './components/orders/order-list/order-list.component';
+import { OrderDetailsComponent } from './components/orders/order-details/order-details.component';
+import { UserDetailsComponent } from './components/users/user-details/user-details.component';
+import { UserListComponent } from './components/users/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +29,12 @@ import { SearchPipe } from './pipes/search.pipe';
     PageNotFoundComponent,
     FeedComponent,
     SearchPipe,
+    SettingsComponent,
+    FriendsComponent,
+    OrderListComponent,
+    OrderDetailsComponent,
+    UserDetailsComponent,
+    UserListComponent,
   ],
   imports: [
     BrowserModule,

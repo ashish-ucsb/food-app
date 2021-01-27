@@ -8,6 +8,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  authStatus: any = JSON.parse(localStorage.getItem('authStatus') || '{}');
   name: string = '';
   email: string = '';
   password: string = '';
